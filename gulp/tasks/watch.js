@@ -7,7 +7,8 @@
     jshint = require('gulp-jshint'),
     cfg = require('../config.json'),
     allPaths = cfg.paths.js_lib.concat(cfg.paths.js_app)
-      .concat(cfg.paths.css).concat(cfg.paths.server);
+      .concat(cfg.paths.css).concat(cfg.paths.server)
+      .concat(cfg.paths.layout);
 
   gulp.task('watch', function() {
     if(gutil.env.env == 'qa' || gutil.env.env == 'prod') {
@@ -22,6 +23,7 @@
 
     watch(cfg.paths.js_lib.concat(cfg.paths.js_app), ['scripts']);
     watch(cfg.paths.css, ['less']);
+    watch(cfg.paths.layout, ['revReplace']);
     watch(allPaths, livereload.changed);
   });
 }());

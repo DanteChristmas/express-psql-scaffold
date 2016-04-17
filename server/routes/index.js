@@ -7,7 +7,7 @@
   // var db = mongojs('myApp', ['myCollections']);
 
   router.get('/', function(req, res) {
-    res.render('index');
+    res.render('dist/index');
   });
 
   module.exports = router;

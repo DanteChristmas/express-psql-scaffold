@@ -6,6 +6,7 @@
       "client/lib/angular-route/angular-route.js"
     ],
     "css": "client/css/app.less",
-    "server": "server/**/*.js"
+    "server": "server/**/*.js",
+    "layout": "server/views/index.html"
   }
 }

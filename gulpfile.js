@@ -6,5 +6,5 @@
 
   requireDir('./gulp/tasks');
 
-  gulp.task('default', ['clean', 'lint', 'scripts', 'less', 'nodemon', 'watch']);
+  gulp.task('default', ['clean', 'lint', 'revreplace', 'nodemon', 'watch']);
 }());
