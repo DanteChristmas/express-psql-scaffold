@@ -7,7 +7,7 @@
     revReplace = require('gulp-rev-replace'),
     cfg = require('../config.json');
 
-  gulp.task('rev', ['scripts', 'less'], function() {
+  gulp.task('rev', ['clean', 'scripts', 'less'], function() {
     if(gutil.env.env != 'qa' && gutil.env.env != 'prod') {
       return false;
     }
@@ -19,6 +19,9 @@
   });
 
   gulp.task('revreplace', ['rev'], function () {
+    // if(gutil.env.env != 'qa' && gutil.env.env != 'prod') {
+    //   return false;
+    // }
     var manifest = gulp.src('client/dist/rev-manifest.json');
     return gulp.src("server/views/index.html")
       .pipe(revReplace({manifest: manifest}))

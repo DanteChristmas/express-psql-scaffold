@@ -10,7 +10,7 @@
       .concat(cfg.paths.css).concat(cfg.paths.server)
       .concat(cfg.paths.layout);
 
-  gulp.task('watch', function() {
+  gulp.task('watch', ['revreplace'], function() {
     if(gutil.env.env == 'qa' || gutil.env.env == 'prod') {
       return false;
     }

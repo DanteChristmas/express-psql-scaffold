@@ -3,6 +3,6 @@
     del = require('del');
 
   gulp.task('clean', function(cb) {
-    del(['client/dist', 'server/view/dist'], cb);
+    return del(['client/dist', 'server/views/dist'], cb);
   });
 }());

@@ -3,6 +3,7 @@
   var gulp = require('gulp'),
     gutil = require('gulp-util'),
     concat = require('gulp-concat'),
+    ngmin = require('gulp-ngmin'),
     uglify = require('gulp-uglify'),
     cfg = require('../config.json');
 
@@ -14,15 +15,10 @@
 
   gulp.task('scripts', function() {
     //lib scripts
-    gulp.src(cfg.paths.js_lib)
-      .pipe(concat('lib.js'))
+    return gulp.src(cfg.paths.js_lib.concat(cfg.paths.js_app))
+      .pipe(concat('app.js'))
+      .pipe(ngmin())
       .pipe(shouldUglify())
       .pipe(gulp.dest('./client/dist'));
-
-    //app scripts
-    return gulp.src(cfg.paths.js_app)
-      .pipe(concat('app.js'))
-      .pipe(shouldUglify())
-      .pipe(gulp.dest('./client/dist'))
   });
 }());
