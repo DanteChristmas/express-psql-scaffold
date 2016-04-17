@@ -1,0 +1,11 @@
+{
+  "paths" : {
+    "js_app": "client/js/**/*.js",
+    "js_lib": [
+      "client/js/lib/angular/angular.js",
+      "client/lib/angular-route/angular-route.js"
+    ],
+    "css": "client/css/app.less",
+    "server": "server/**/*.js"
+  }
+}
