@@ -1,0 +1,14 @@
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap';
+
+$primary-color: #333;
+
+.class1 {
+  background-color: $primary-color;
+}
+.class2 {
+  background-color: #fff;
+  color: $primary-color;
+}
+.class3 {
+  border: 1px solid $primary-color;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="redditClone">
+<html ng-app="myApp">
   <head>
     <title>My App</title>
 
@@ -14,6 +14,8 @@
       <ng-view></ng-view>
     </div>
 
-    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+    {{#if hasLiveReload}}
+      <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+    {{/if}}
   </body>
 </html>
