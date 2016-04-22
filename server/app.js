@@ -6,14 +6,16 @@
   var logger = require('morgan');
   var cookieParser = require('cookie-parser');
   var bodyParser = require('body-parser');
+  var db = require('./db.js');
 
   var routes = require('./routes/index');
 
   var app = express();
+
+  console.log(process.env.NODE_ENV);
   //comment
   app.set('views', path.join(__dirname, 'views'));
-  app.engine('html', require('ejs').renderFile);
-  app.set('view engine', 'html');
+  app.set('view engine', 'hbs');
 
   app.use(logger('dev'));
   app.use(bodyParser.json());
