@@ -2,10 +2,12 @@
   "paths" : {
     "js_app": "client/js/**/*.js",
     "js_lib": [
+      "client/lib/jquery/dist/jquery.js",
       "client/lib/angular/angular.js",
-      "client/lib/angular-route/angular-route.js"
+      "client/lib/angular-route/angular-route.js",
+      "client/lib/bootstrap/dist/js/bootstrap.js"
     ],
-    "css": "client/css/app.less",
+    "css": "client/css/app.scss",
     "server": "server/**/*.js",
     "layout": "server/views/index.html"
   }
