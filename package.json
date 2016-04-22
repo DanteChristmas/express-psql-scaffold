@@ -1,7 +1,7 @@
 {
   "name": "app-name",
   "version": "0.0.1",
-  "description": "mean stack app with gulp",
+  "description": "express/knex/gulp",
   "main": "app.js",
   "scripts": {
     "start": "gulp --env=${NODE_ENV}",
@@ -15,9 +15,9 @@
   "author": "Josh Sullivan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jjs5286/mean-gulp-scaffold/issues"
+    "url": "https://github.com/jjs5286/express-psql-scaffold/issues"
   },
-  "homepage": "https://github.com/jjs5286/mean-gulp-scaffold#readme",
+  "homepage": "https://github.com/jjs5286/express-psql-scaffold#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "cookie-parser": "^1.4.1",
@@ -38,8 +38,9 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "jshint": "^2.9.1",
-    "mongojs": "^2.3.0",
+    "knex": "^0.10.0",
     "morgan": "^1.7.0",
+    "pg": "^4.5.3",
     "require-dir": "^0.3.0"
   }
 }
