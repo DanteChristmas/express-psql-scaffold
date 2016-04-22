@@ -5,7 +5,7 @@ module.exports = {
   dev: {
     client: 'postgresql',
     connection: {
-      database: 'blog_dev'
+      database: 'g-reads'
     }
   }
 }
