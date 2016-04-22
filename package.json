@@ -1,5 +1,5 @@
 {
-  "name": "app-name",
+  "name": "reddit-clone",
   "version": "0.0.1",
   "description": "express/knex/gulp",
   "main": "app.js",
