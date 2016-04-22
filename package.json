@@ -4,7 +4,7 @@
   "description": "express/knex/gulp",
   "main": "app.js",
   "scripts": {
-    "start": "gulp --env=${NODE_ENV}",
+    "start": "gulp clean && gulp --env=${NODE_ENV}",
     "test": "gulp-test",
     "postinstall": "bower install"
   },
@@ -37,6 +37,7 @@
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
+    "hbs": "^4.0.0",
     "jshint": "^2.9.1",
     "knex": "^0.10.0",
     "morgan": "^1.7.0",
