@@ -8,17 +8,15 @@
 
   router.get('/books', function(req, res) {
     knex('books')
-      .innerJoin('book_authors', 'books.id', 'book_authors.book_id')
-      .innerJoin('authors', 'book_authors.author_id', 'authors.id')
       .select('books.id',
         'books.title',
-        knex.raw('GROUP_CONCAT(??.?? as ??)',
-        ['authors', 'last_name', 'stuff'])
+        'authors.first_name as first',
+        'authors.last_name as last'
       )
-
-
-      // .select('authors.id', 'authors.first_name', 'authors.last_name')
+      .leftJoin('book_authors', 'books.id', 'book_authors.book_id')
+      .leftJoin('authors', 'book_authors.author_id', 'authors.id')
     .then(function(books) {
+      debugger;
       res.json(books);
     }).catch(function(err) {
       console.error(err);
