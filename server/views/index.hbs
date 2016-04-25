@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="reddit-clone">
   <head>
-    <title>My App</title>
-
+    <title>Reddit Clone</title>
     <link rel="stylesheet" type="text/css" href="/app.css">
     <script type="text/javascript" src="/app.js"></script>
   </head>
 
   <body>
     <div>
-      <h1>My App</h1>
-      <hr />
-      <ng-view></ng-view>
+      <div ui-view></div>
+
+      <a ui-sref="state1">State 1 test</a>
+      <a ui-sref="state2">State 2</a>
     </div>
 
     {{#if hasLiveReload}}

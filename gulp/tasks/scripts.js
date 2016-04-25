@@ -13,11 +13,11 @@
       : gutil.noop()
   };
 
-  gulp.task('scripts', function() {
+  gulp.task('scripts', ['templates'], function() {
     //lib scripts
     return gulp.src(cfg.paths.js_lib.concat(cfg.paths.js_app))
       .pipe(concat('app.js'))
-      .pipe(ngmin())
+      // .pipe(ngmin())
       .pipe(shouldUglify())
       .pipe(gulp.dest('./client/dist'));
   });

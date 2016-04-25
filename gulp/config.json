@@ -1,11 +1,16 @@
 {
   "paths" : {
-    "js_app": "client/js/**/*.js",
+    "js_app": [
+      "client/js/app.js",
+      "client/dist/templates.js",
+      "client/js/routes.js"
+    ],
     "js_lib": [
       "client/lib/jquery/dist/jquery.js",
+      "client/lib/bootstrap/dist/js/bootstrap.js",
       "client/lib/angular/angular.js",
-      "client/lib/angular-route/angular-route.js",
-      "client/lib/bootstrap/dist/js/bootstrap.js"
+      "client/lib/angular-ui-router/release/angular-ui-router.js"
+
     ],
     "css": "client/css/app.scss",
     "server": "server/**/*.js",

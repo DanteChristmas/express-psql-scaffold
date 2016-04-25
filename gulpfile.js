@@ -6,5 +6,5 @@
 
   requireDir('./gulp/tasks');
 
-  gulp.task('default', ['scripts', 'sass', 'revreplace', 'nodemon', 'watch']);
+  gulp.task('default', ['scripts', 'sass', 'templates', 'revreplace', 'nodemon', 'watch']);
 }());

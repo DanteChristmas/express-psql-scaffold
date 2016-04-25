@@ -1,4 +1,3 @@
-//testing
-//test 2
-//test 3
-//test 4
+'use strict';
+angular.module('templates', []);
+angular.module('reddit-clone', ['ui.router', 'templates']);

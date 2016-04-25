@@ -7,7 +7,7 @@
     revReplace = require('gulp-rev-replace'),
     cfg = require('../config.json');
 
-  gulp.task('rev', ['scripts', 'sass'], function() {
+  gulp.task('rev', ['scripts', 'sass', 'templates'], function() {
     if(gutil.env.env != 'qa' && gutil.env.env != 'prod') {
       return false;
     }
